@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Esportify/static/css/main.e6c13ad2.css",
+    "main.js": "/Esportify/static/js/main.bc90be4f.js",
+    "static/js/787.3d8c2df3.chunk.js": "/Esportify/static/js/787.3d8c2df3.chunk.js",
+    "index.html": "/Esportify/index.html",
+    "main.e6c13ad2.css.map": "/Esportify/static/css/main.e6c13ad2.css.map",
+    "main.bc90be4f.js.map": "/Esportify/static/js/main.bc90be4f.js.map",
+    "787.3d8c2df3.chunk.js.map": "/Esportify/static/js/787.3d8c2df3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.bc90be4f.js"
+  ]
+}
