@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useAppSelector} from "./store/hook";
+import {createTheme, ThemeProvider} from "@mui/material";
+import {orange} from "@mui/material/colors";
+import {Box, Button, Grid} from "./mui";
+import {Header} from "./components/Header";
+import {Login} from "./pages/Login/Login";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {themeApp} = useAppSelector(state => state.general);
+    const theme = createTheme({
+        palette: {
+            mode: themeApp ? 'dark' : 'light',
+            primary: {
+                main: orange[500],
+            },
+            background: {
+                default: themeApp ? '#212121' : '#fff',
+                paper: themeApp ? '#212121' : '#fff',
+            },
+        },
+    });
+
+    const bgColor = themeApp ? '#2f2f2f' : '#eaeef4';
+
+
+    return (
+
+        <ThemeProvider theme={theme}>
+            <Box sx={{height: '100vh', bgcolor: bgColor}} >
+                <Header />
+                <Login />
+            </Box>
+        </ThemeProvider>
+
+
+    );
 }
 
 export default App;
